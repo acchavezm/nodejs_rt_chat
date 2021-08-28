@@ -1,0 +1,70 @@
+html, body {
+    height: 100%;
+}
+
+#form {
+  background: #0d6efd;
+  padding: 0.25rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  height: 5%;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  width: 50%;
+}
+#input {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  margin: 0.25rem;
+  border-radius: 00.25rem;
+}
+#input:focus {
+  outline: none;
+}
+#form > button {
+  padding: 0 1rem;
+  margin: 0.25rem;
+  outline: none;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+#messages > li {
+  padding: 0.5rem 1rem;
+}
+#messages > li:nth-child(odd) {
+  background: #efefef;
+}
+
+#welcome-message {
+  color: white;
+  font-weight: bold;
+  background: #0d6efd;
+  padding: 0.75rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  height: 5%;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  width: 50%;
+}
+
+.col-chat {
+    top: 0;
+    right: 0;
+    height: 95%;
+    border-left: 1px solid #0d6efd;
+}
+
+.col-game {
+    height: 95%;
+}

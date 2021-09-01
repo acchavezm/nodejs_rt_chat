@@ -1,5 +1,10 @@
-html, body {
+html {
     height: 100%;
+}
+
+body { 
+    height: 100%;
+    padding-top: 4.5rem;
 }
 
 #form {
@@ -34,7 +39,6 @@ html, body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow-y: scroll;
 }
 #messages > li {
   padding: 0.5rem 1rem;
@@ -61,10 +65,16 @@ html, body {
 .col-chat {
     top: 0;
     right: 0;
-    height: 95%;
+    padding: 0;
+    height: 100%;
     border-left: 1px solid #0d6efd;
 }
 
 .col-game {
-    height: 95%;
+    height: 100%;
+}
+
+.counter-header {
+  background-color: green;
+  color: white;
 }

@@ -6,38 +6,21 @@
     <link rel="stylesheet" href="/css/chat.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Chat with NodeJS</a>
+        <a class="navbar-brand" href="/">Chat with NodeJS</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
           </ul>
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" disabled>
+            <button class="btn btn-outline-light" type="submit" disabled>Search</button>
           </form>
         </div>
       </div>
@@ -46,22 +29,27 @@
       <div class="row justify-content-center h-100">
         <div class="col col-game">
           <div class="card" style="width: 18rem;">
+            <h5 class="card-header counter-header">Contador</h5>
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h1 id="counter" class="card-title">0</h1>
+              <p class="card-text">Ejemplo de un contador entre dos o más jugadores</p>
+              <button id='btn_click' class="bnt btn-lg btn-success">Tap aquí!</button>
             </div>
           </div>
-          <div class="align-middle" id="welcome-message">Users online:&nbsp;<span id="users_online"></span></div>
         </div>
         <div class="col col-chat">
           <ul id="messages"></ul>
-          <form id="form" action="">
-            <input id="input" autocomplete="off" placeholder="Type a message..."/><button type="button" class="btn btn-outline-light">Send</button>
-          </form>
         </div>
       </div>
     </div>
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <div class="align-middle" id="welcome-message">Users online:&nbsp;<span id="users_online"></span></div>
+        <form id="form" action="">
+          <input id="input" autocomplete="off" placeholder="Type a message..."/><button type="button" class="btn btn-outline-light">Send</button>
+        </form>      
+      </div>
+    </footer>
 
     <script src="/socket.io/socket.io.js"></script>
     <script
